@@ -154,8 +154,8 @@ export class JsonEditorComponent implements ControlValueAccessor, OnInit {
     return this.editor.getSelection();
   }
 
-  public setSchema(schema: any) {
-    this.editor.setSchema(schema);
+  public setSchema(schema: any, schemaRef: any) {
+    this.editor.setSchema(schema, schemaRef);
   }
 
   public setOptions(newOptions: JsonEditorOptions) {
@@ -210,6 +210,8 @@ export class JsonEditorOptions {
   public modes: JsonEditorMode[];
   public name: String;
   public schema: Object;
+  public schemaRef: Object;
+  public templates: Object[];
   public search: boolean;
   public indentation: Number;
   public theme: Number;
